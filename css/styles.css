@@ -49,7 +49,7 @@ nav ul li a::after {
   content: '';
   width: 0;
   height: 3px;
-  background: rgb(113, 112, 112);
+  background: blueviolet;
   position: absolute;
   left: 0;
   bottom: -6px;
@@ -64,21 +64,17 @@ nav ul li a:hover::after {
   width: 140px;
 }
 
-header {
-  overflow: hidden;
-  background-color: #ffffff;
-  padding: 20px 10px;
+.header-text {
+  margin-top: 20%;
+  font-size: 30px;
 }
 
-header a {
-  float: left;
-  color: grey;
-  text-align: center;
-  padding: 5px;
-  text-decoration: none;
-  font-size: 18px; 
-  line-height: 25px;
-  margin-right: 15px;
+.header-text h1 {
+  font-size: 60px;
+}
+
+.header-text h1 span {
+  color: blueviolet;
 }
 
 nav a.logo {
@@ -86,54 +82,6 @@ nav a.logo {
   font-weight: 700;
   text-decoration: none;
   color: black;
-}
-
-header a:hover {
-    color: black;
-    border-bottom: 3px solid rgb(113, 112, 112);
-}
-
-header a.active {
-  color: black;
-  border-bottom: 3px solid rgb(113, 112, 112);
-}
-
-.header-right {
-  float: right;
-}
-
-@media screen and (max-width: 700px) {
-  header a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .header-right {
-    float: none;
-  }
-}
-
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;  /* Full screen height */
-  background-color: #f4f4f4;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 48px;
-  margin: 0;
-  font-weight: bold;
-}
-
-.hero p {
-  font-size: 24px;
-  color: grey;
-  margin: 10px 0;
 }
 
 .cta-button {
@@ -147,5 +95,62 @@ header a.active {
 }
 
 .cta-button:hover {
-  background-color: grey;
+  background-color: blueviolet;
+}
+
+#about {
+  padding: 80px 0;
+  color: #ababab;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-col-1 {
+  flex-basis: 35%;
+}
+
+.about-col-1 img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.about-col-2 {
+  flex-basis: 60%;
+}
+
+.sub-title {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+}
+
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-links::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: blueviolet;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+  width: 50%;
 }
