@@ -37,23 +37,60 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="images/about.png" style="border: 1px black solid;" alt="Kennedy Ada">
+                    <img src="images/about.png" alt="Kennedy Ada">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                        Magnam, porro autem sequi, suscipit nobis mollitia laboriosam 
-                        nesciunt excepturi numquam enim officia molestiae quis quo 
-                        accusantium deleniti soluta aperiam unde optio.</p>
+                    <p>I hold a Bachelor of Science in Mathematics and Computer Science from Kenyatta University,
+                         where I developed a solid foundation in analytical and computational skills. 
+                         My professional journey began with a casual contract internship at the IT Department of BHC in Upper Hill, Nairobi, 
+                         where I gained valuable experience in real-world IT operations. 
+                         Currently, I am an Apprentice Software Developer at Zone01 Kisumu, 
+                         where I am honing my skills in coding and problem-solving while contributing to innovative projects. 
+                         With a strong passion for technology and continuous learning, 
+                         I aim to leverage my background in mathematics and computer science to create impactful software solutions.</p>
                         <div class="tab-titles">
-                            <p class="tab-links active-link">Skills</p>
-                            <p class="tab-links">Experience</p>
-                            <p class="tab-links">Education</p>
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>GoLang CLI</span><br>Developing Commandline Tools</li>
+                                <li><span>Web Development</span><br>Web App Development</li>
+                                <li><span>App Development</span><br>Building Android/iOS apps</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2023 - Current</span><br>Full-Stack Software Development Apprentice at Zone01, Kisumu</li>
+                                <li><span>2023 Feb - June</span><br>Internship Casual Contract in IT Department at BHC, Nairobi</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2022</span><br>BSc Mathematics & Computer Science</li>
+                                <li><span>2013</span><br>KCSE Certificate</li>
+                            </ul>
                         </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
 </body>
 
 </html>

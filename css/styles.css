@@ -119,6 +119,7 @@ nav a.logo {
 }
 
 .about-col-2 {
+  padding-top: 120px;
   flex-basis: 60%;
 }
 
@@ -152,5 +153,23 @@ nav a.logo {
 }
 
 .tab-links.active-link::after{
-  width: 50%;
+  width: 75%;
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.tab-contents ul li span {
+  color: purple;
+  font-size: 14px;
+}
+
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: block;
 }
