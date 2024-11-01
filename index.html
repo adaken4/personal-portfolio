@@ -10,9 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
+        <script src="https://kit.fontawesome.com/8a471bbcdb.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <!-- --header-- -->
     <div id="header"> 
         <div class="container">
             <nav>
@@ -33,6 +35,7 @@
             </div>
         </div>
     </div>
+    <!-- --about-- -->
     <div id="about">
         <div class="container">
             <div class="row">
@@ -42,13 +45,9 @@
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
                     <p>I hold a Bachelor of Science in Mathematics and Computer Science from Kenyatta University,
-                         where I developed a solid foundation in analytical and computational skills. 
-                         My professional journey began with a casual contract internship at the IT Department of BHC in Upper Hill, Nairobi, 
-                         where I gained valuable experience in real-world IT operations. 
+                         where I developed a solid foundation in analytical and computational skills.  
                          Currently, I am an Apprentice Software Developer at Zone01 Kisumu, 
-                         where I am honing my skills in coding and problem-solving while contributing to innovative projects. 
-                         With a strong passion for technology and continuous learning, 
-                         I aim to leverage my background in mathematics and computer science to create impactful software solutions.</p>
+                         where I am honing my skills in coding and problem-solving while contributing to innovative projects.</p>
                         <div class="tab-titles">
                             <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                             <p class="tab-links" onclick="opentab('experience')">Experience</p>
@@ -77,6 +76,40 @@
             </div>
         </div>
     </div>
+
+    <!-- --services-- -->
+     <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas doloremque ipsum 
+                        veniam quisquam voluptatem dolor, necessitatibus beatae fuga tenetur, quis ducimus 
+                        assumenda saepe perspiciatis. Id iusto iste quasi cumque ipsum.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas doloremque ipsum 
+                        veniam quisquam voluptatem dolor, necessitatibus beatae fuga tenetur, quis ducimus 
+                        assumenda saepe perspiciatis. Id iusto iste quasi cumque ipsum.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas doloremque ipsum 
+                        veniam quisquam voluptatem dolor, necessitatibus beatae fuga tenetur, quis ducimus 
+                        assumenda saepe perspiciatis. Id iusto iste quasi cumque ipsum.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+     </div>
+
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
