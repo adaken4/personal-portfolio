@@ -19,19 +19,21 @@
         <div class="container">
             <nav>
                 <a href="#default" class="logo">Kennedy Ada</a>
-                <ul>
-                    <li><a class="active" href="#">Home</a></li>
-                    <li><a class="active" href="#">About Me/Bio</a></li>
-                    <li><a href="#">Work Samples</a></li>
-                    <li><a href="#">Skills and Expertise</a></li>
-                    <li><a href="#">Testimonials</a></li>
-                    <li><a href="#">Contact Information</a></li>
+                <ul id="sidemenu">
+                    <li><a class="active" href="#header">Home</a></li>
+                    <li><a class="active" href="#about">About Me</a></li>
+                    <li><a href="#services">My Services</a></li>
+                    <li><a href="#portfolio">Work Samples</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closeMenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openMenu()"></i>
             </nav>
             <div class="header-text">
                 <h1>Hi, I'm <span>Kennedy</span><br>Ada from Kenya</h1>
                 <p>Software Developer | Tech Enthusiast | Problem Solver</p>
-                <a href="work-samples.html" class="cta-button">View My Work</a>
+                <br>
+                <a href="#portfolio" class="cta-button">View My Work</a>
             </div>
         </div>
     </div>
@@ -172,16 +174,19 @@
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="Email" placeholder="Your Email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit">Submit</button>
+                        <button type="submit" class="btn btn2">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
+        <div class="copyright">
+            <p>Copyright &copy; Kennedy Ada.</p>
+        </div>
      </div>
 
     <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
+        let tablinks = document.getElementsByClassName("tab-links");
+        let tabcontents = document.getElementsByClassName("tab-contents");
         function opentab(tabname) {
             for (tablink of tablinks) {
                 tablink.classList.remove("active-link");
@@ -192,6 +197,19 @@
             event.currentTarget.classList.add("active-link")
             document.getElementById(tabname).classList.add("active-tab");
         }
+    </script>
+
+    <script>
+        let sidemenu = document.getElementById("sidemenu");
+
+        function openMenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closeMenu() {
+            sidemenu.style.right = "-200px";
+        }
+
     </script>
 </body>
 
