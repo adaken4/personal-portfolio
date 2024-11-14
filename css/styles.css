@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-body { 
+body {
   margin: 0;
   font-weight: 200;
 }
@@ -39,7 +39,7 @@ nav ul li a {
   text-align: center;
   padding: 5px;
   text-decoration: none;
-  font-size: 16px; 
+  font-size: 16px;
   line-height: 25px;
   position: relative;
   /* margin-right: 15px; */
@@ -152,7 +152,7 @@ nav a.logo {
   transition: 0.5s;
 }
 
-.tab-links.active-link::after{
+.tab-links.active-link::after {
   width: 75%;
 }
 
@@ -231,7 +231,7 @@ nav a.logo {
   margin-top: 50px;
 }
 
-.work{
+.work {
   border-radius: 10px;
   position: relative;
   overflow: hidden;
@@ -302,4 +302,47 @@ nav a.logo {
 
 .btn:hover {
   background: blueviolet
+}
+
+/* --contact-- */
+
+.contact-left {
+  flex-basis: 35%;
+}
+
+.contact-right {
+  flex-basis: 60%;
+}
+
+.contact-left p {
+  margin-top: 30px;
+}
+
+.contact-left p i {
+  color: blueviolet;
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.social-icons {
+  margin-top: 30px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+  color: blueviolet;
+  transform: translateY(-5px);
+}
+
+.btn.btn2 {
+  display: inline-block;
+  background: blueviolet;
 }
