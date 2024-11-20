@@ -15,20 +15,20 @@
 
 <body>
     <!-- --header-- -->
+    <nav>
+        <a href="#header" class="logo">Kennedy Ada</a>
+        <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#services">My Services</a></li>
+            <li><a href="#portfolio">Work Samples</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-times" onclick="closeMenu()"></i>
+        </ul>
+        <i class="fas fa-bars" onclick="openMenu()"></i>
+    </nav>
     <div id="header">
         <div class="container">
-            <nav>
-                <a href="#default" class="logo">Kennedy Ada</a>
-                <ul id="sidemenu">
-                    <li><a class="active" href="#header">Home</a></li>
-                    <li><a class="active" href="#about">About Me</a></li>
-                    <li><a href="#services">My Services</a></li>
-                    <li><a href="#portfolio">Work Samples</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-times" onclick="closeMenu()"></i>
-                </ul>
-                <i class="fas fa-bars" onclick="openMenu()"></i>
-            </nav>
             <div class="header-text">
                 <h1>Hi, I'm <span>Kennedy</span><br>Ada from Kenya</h1>
                 <p>Software Developer | Tech Enthusiast | Problem Solver</p>
@@ -90,25 +90,25 @@
                 <div>
                     <i class="fa-solid fa-code"></i>
                     <h2>Web Design</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas doloremque ipsum
-                        veniam quisquam voluptatem dolor, necessitatibus beatae fuga tenetur, quis ducimus
-                        assumenda saepe perspiciatis. Id iusto iste quasi cumque ipsum.</p>
+                    <p>As a full stack developer, I specialize in creating visually appealing and highly
+                        functional websites that meet the unique needs of each client. My web design services
+                        encompass everything from initial concept development to final deployment.</p>
                     <a href="#">Learn more</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-crop"></i>
                     <h2>UI/UX Design</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas doloremque ipsum
-                        veniam quisquam voluptatem dolor, necessitatibus beatae fuga tenetur, quis ducimus
-                        assumenda saepe perspiciatis. Id iusto iste quasi cumque ipsum.</p>
+                    <p>I focus on creating intuitive user experiences and aesthetically pleasing interfaces
+                        that enhance user satisfaction. My UX/UI design process involves thorough research
+                        and testing to ensure that every design decision is backed by data.</p>
                     <a href="#">Learn more</a>
                 </div>
                 <div>
                     <i class="fa-brands fa-app-store"></i>
                     <h2>App Design</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas doloremque ipsum
-                        veniam quisquam voluptatem dolor, necessitatibus beatae fuga tenetur, quis ducimus
-                        assumenda saepe perspiciatis. Id iusto iste quasi cumque ipsum.</p>
+                    <p>I provide comprehensive app design services for both web and mobile applications,
+                        focusing on functionality, performance, and user engagement. My approach combines
+                        technical expertise with creative design principles.</p>
                     <a href="#">Learn more</a>
                 </div>
             </div>
@@ -140,7 +140,7 @@
                     </div>
                 </div>
                 <div class="work">
-                    <img height="400px" src="images/work-3.png">
+                    <img src="images/work-3.png">
                     <div class="layer">
                         <h3>Social Media App</h3>
                         <p>The app connects you to the talented people around the world.
@@ -170,7 +170,7 @@
                     <a href="" class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <form>
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="Email" placeholder="Your Email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
@@ -211,6 +211,19 @@
         }
 
     </script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxnFlvn7B6lGxzGwKdxKJahkeC06QTr9mcN65NgUAmmlwvoUIumpEO3MJOFdfxqUP4lTg/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
 </body>
 
 </html>
