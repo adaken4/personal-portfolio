@@ -20,6 +20,10 @@ const eslintConfig = [
       "next-env.d.ts",
     ],
   },
+  // Add Prettier configuration to disable formatting conflicts
+  ...compat.config({
+    extends: ["next", "prettier"],
+  }),
 ];
 
 export default eslintConfig;
