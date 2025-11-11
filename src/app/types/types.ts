@@ -10,3 +10,12 @@ export interface Project {
   liveUrl: string;
   githubUrl: string;
 }
+
+export interface Experience {
+  company: string;
+  role: string;
+  period: string;
+  description: string;
+  achievements: string[];
+  technologies: string[];
+}
