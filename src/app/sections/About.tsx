@@ -1,5 +1,115 @@
+"use client";
+
 import { LuUsers, LuLightbulb, LuTarget } from "react-icons/lu";
 import { BiCodeAlt } from "react-icons/bi";
+import { useState, useEffect } from "react";
+
+const tokenColors = {
+  keyword: "text-purple-400",
+  key: "text-green-400",
+  string: "text-yellow-300",
+  boolean: "text-blue-400",
+  symbol: "text-gray-300",
+  text: "text-gray-200",
+};
+
+const code = [
+  [
+    { t: "keyword", v: "const" },
+    { t: "text", v: " developer " },
+    { t: "symbol", v: "= {" },
+  ],
+  [
+    { t: "key", v: "  name" },
+    { t: "symbol", v: ": " },
+    { t: "string", v: "'Kennedy Ada'," },
+  ],
+  [
+    { t: "key", v: "  location" },
+    { t: "symbol", v: ": " },
+    { t: "string", v: "'Kisumu, Kenya'," },
+  ],
+  [
+    { t: "key", v: "  role" },
+    { t: "symbol", v: ": " },
+    { t: "string", v: "'Full-Stack Developer'," },
+  ],
+  [
+    { t: "key", v: "  passion" },
+    { t: "symbol", v: ": [" },
+  ],
+  [{ t: "string", v: "    'Clean Code'," }],
+  [{ t: "string", v: "    'Problem Solving'," }],
+  [{ t: "string", v: "    'Community Building'" }],
+  [{ t: "symbol", v: "  ]," }],
+  [
+    { t: "key", v: "  available" },
+    { t: "symbol", v: ": " },
+    { t: "boolean", v: "true" },
+  ],
+  [{ t: "symbol", v: "};" }],
+];
+
+function TypewriterCode() {
+  const [line, setLine] = useState(0);
+  const [char, setChar] = useState(0);
+  const [display, setDisplay] = useState([""]);
+
+  useEffect(() => {
+    const fullLine = code[line].map((x) => x.v).join("");
+
+    if (char < fullLine.length) {
+      setTimeout(() => {
+        setDisplay((prev) => {
+          const newLines = [...prev];
+          newLines[line] = fullLine.slice(0, char + 1);
+          return newLines;
+        });
+        setChar((c) => c + 1);
+      }, 50);
+    } else if (line < code.length - 1) {
+      setTimeout(() => {
+        setLine((l) => l + 1);
+        setChar(0);
+        setDisplay((prev) => [...prev, ""]);
+      }, 300);
+    }
+  }, [char, line]);
+
+  return (
+    <div className="rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 p-8 shadow-2xl">
+      <div className="rounded-lg bg-gray-900 p-6 font-mono text-sm text-green-400">
+        <div className="mb-3 flex items-center gap-2">
+          <span className="h-3 w-3 rounded-full bg-red-500" />
+          <span className="h-3 w-3 rounded-full bg-yellow-500" />
+          <span className="h-3 w-3 rounded-full bg-green-500" />
+        </div>
+        <code className="block whitespace-pre">
+          {display.map((ln, i) => {
+            // re-tokenize each line dynamically
+            let index = 0;
+            return (
+              <div key={i}>
+                {code[i].map((token, j) => {
+                  const text = ln.slice(index, index + token.v.length);
+                  index += token.v.length;
+                  return (
+                    <span key={j} className={tokenColors[token.t]}>
+                      {text}
+                    </span>
+                  );
+                })}
+                {i === line && (
+                  <span className="ml-1 inline-block h-2 w-1 animate-pulse bg-yellow-300" />
+                )}
+              </div>
+            );
+          })}
+        </code>
+      </div>
+    </div>
+  );
+}
 
 export default function About() {
   return (
@@ -62,56 +172,7 @@ export default function About() {
               empathy for the people who use it.
             </p>
           </div>
-
-          <div className="relative">
-            <div className="rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 p-8 shadow-2xl">
-              <div className="rounded-lg bg-gray-900 p-6 font-mono text-sm text-green-400">
-                <div className="mb-4 flex items-center gap-2">
-                  <div className="h-3 w-3 rounded-full bg-red-500"></div>
-                  <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
-                  <div className="h-3 w-3 rounded-full bg-green-500"></div>
-                </div>
-                <code>
-                  <span className="text-purple-400">const</span> developer ={" "}
-                  {"{"}
-                  <br />
-                  &nbsp;&nbsp;name:{" "}
-                  <span className="text-yellow-300">&#39;Kennedy Ada&#39;</span>
-                  ,<br />
-                  &nbsp;&nbsp;location:{" "}
-                  <span className="text-yellow-300">
-                    &#39;Kisumu, Kenya&#39;
-                  </span>
-                  ,<br />
-                  &nbsp;&nbsp;role:{" "}
-                  <span className="text-yellow-300">
-                    &#39;Full-Stack Developer&#39;
-                  </span>
-                  ,<br />
-                  &nbsp;&nbsp;passion: [<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;
-                  <span className="text-yellow-300">&#39;Clean Code&#39;</span>,
-                  <br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;
-                  <span className="text-yellow-300">
-                    &#39;Problem Solving&#39;
-                  </span>
-                  ,<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;
-                  <span className="text-yellow-300">
-                    &#39;Community Building&#39;
-                  </span>
-                  <br />
-                  &nbsp;&nbsp;],
-                  <br />
-                  &nbsp;&nbsp;available:{" "}
-                  <span className="text-cyan-400">true</span>
-                  <br />
-                  {"}"};
-                </code>
-              </div>
-            </div>
-          </div>
+          {TypewriterCode()}
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

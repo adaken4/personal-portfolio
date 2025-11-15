@@ -14,7 +14,7 @@ export default function ExperienceCard({ exp }: ExperienceCardProps) {
       </div>
 
       {/* Card */}
-      <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-lg transition-shadow duration-300 hover:shadow-xl md:p-8 dark:border-gray-700 dark:bg-gray-800">
+      <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-lg transition-shadow duration-700 hover:shadow-xl md:p-8 dark:border-gray-700 dark:bg-gray-800">
         {/* Header */}
         <div className="mb-4 flex flex-col md:flex-row md:items-center md:justify-between">
           <div>
