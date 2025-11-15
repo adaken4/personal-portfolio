@@ -1,4 +1,14 @@
-import { LuGithub, LuLinkedin, LuMail } from "react-icons/lu";
+import {
+  LuGithub,
+  LuLinkedin,
+  LuMail,
+  LuFileText,
+  LuUser,
+  LuZap,
+  LuCode,
+  LuBriefcase,
+  LuMailOpen,
+} from "react-icons/lu";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -23,41 +33,56 @@ export default function Footer() {
               <li>
                 <a
                   href="#about"
-                  className="transition-colors hover:text-cyan-400"
+                  className="flex items-center transition-colors hover:text-cyan-400"
                 >
+                  <LuUser size={16} className="mr-2" />
                   About
                 </a>
               </li>
               <li>
                 <a
                   href="#skills"
-                  className="transition-colors hover:text-cyan-400"
+                  className="flex items-center transition-colors hover:text-cyan-400"
                 >
+                  <LuZap size={16} className="mr-2" />
                   Skills
                 </a>
               </li>
               <li>
                 <a
                   href="#projects"
-                  className="transition-colors hover:text-cyan-400"
+                  className="flex items-center transition-colors hover:text-cyan-400"
                 >
+                  <LuCode size={16} className="mr-2" />
                   Projects
                 </a>
               </li>
               <li>
                 <a
                   href="#experience"
-                  className="transition-colors hover:text-cyan-400"
+                  className="flex items-center transition-colors hover:text-cyan-400"
                 >
+                  <LuBriefcase size={16} className="mr-2" />
                   Experience
                 </a>
               </li>
               <li>
                 <a
                   href="#contact"
-                  className="transition-colors hover:text-cyan-400"
+                  className="flex items-center transition-colors hover:text-cyan-400"
                 >
+                  <LuMailOpen size={16} className="mr-2" />
                   Contact
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/resume.pdf"
+                  download
+                  className="flex items-center transition-colors hover:text-cyan-400"
+                >
+                  <LuFileText size={16} className="mr-2" />
+                  Download Resume
                 </a>
               </li>
             </ul>
