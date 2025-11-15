@@ -8,7 +8,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="group overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 shadow-lg transition-all duration-300 hover:shadow-2xl dark:border-gray-700 dark:bg-gray-900">
+    <div className="group overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 shadow-lg transition-all duration-700 hover:shadow-2xl dark:border-gray-700 dark:bg-gray-900">
       {/* Image Section */}
       <div className="relative h-64 overflow-hidden">
         <Image
@@ -87,7 +87,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <div className="flex gap-4 border-t border-gray-200 pt-4 dark:border-gray-700">
           <a
             href={project.liveUrl}
-            className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 px-4 py-2 font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
+            className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 px-4 py-2 font-semibold text-white transition-all duration-700 hover:scale-105 hover:shadow-lg"
           >
             <LuExternalLink size={18} />
             Live Demo
@@ -96,7 +96,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-gray-200 px-4 py-2 font-semibold text-gray-800 transition-all duration-300 hover:scale-105 hover:shadow-lg dark:bg-gray-800 dark:text-white"
+            className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-gray-200 px-4 py-2 font-semibold text-gray-800 transition-all duration-700 hover:scale-105 hover:shadow-lg dark:bg-gray-800 dark:text-white"
           >
             <LuGithub size={18} />
             GitHub

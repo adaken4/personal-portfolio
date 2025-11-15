@@ -93,7 +93,7 @@ export default function Skills() {
           {skillCategories.map((category, idx) => (
             <div
               key={idx}
-              className="rounded-xl border border-gray-200 bg-white p-6 shadow-lg transition-shadow duration-300 hover:shadow-xl dark:border-gray-700 dark:bg-gray-800"
+              className="rounded-xl border border-gray-200 bg-white p-6 shadow-lg transition-shadow duration-700 hover:shadow-xl dark:border-gray-700 dark:bg-gray-800"
             >
               <h3 className="mb-4 flex items-center gap-2 text-xl font-bold text-gray-900 dark:text-white">
                 <span className="h-2 w-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500"></span>

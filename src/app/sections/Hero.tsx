@@ -31,7 +31,7 @@ export default function Hero() {
                 alt="Kennedy Ada"
                 width={128}
                 height={128}
-                className="h-full w-full rounded-full object-cover opacity-0 transition-opacity duration-300"
+                className="h-full w-full rounded-full object-cover opacity-0 transition-opacity duration-700"
                 onLoad={(e) => e.currentTarget.classList.remove("opacity-0")}
                 priority
               />
@@ -54,21 +54,21 @@ export default function Hero() {
           <div className="mb-12 flex flex-wrap justify-center gap-4">
             <button
               onClick={() => scrollToSection("#projects")}
-              className="rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 px-8 py-4 font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 px-8 py-4 font-semibold text-white transition-all duration-700 hover:scale-105 hover:shadow-xl"
             >
               View My Work
             </button>
             <a
               href="/resume.pdf"
               download
-              className="flex items-center gap-2 rounded-lg border-2 border-gray-300 bg-white px-8 py-4 font-semibold text-gray-800 transition-all duration-300 hover:scale-105 hover:border-blue-500 hover:shadow-xl dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:hover:border-cyan-500"
+              className="flex items-center gap-2 rounded-lg border-2 border-gray-300 bg-white px-8 py-4 font-semibold text-gray-800 transition-all duration-700 hover:scale-105 hover:border-blue-500 hover:shadow-xl dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:hover:border-cyan-500"
             >
               <LuDownload size={20} />
               Download Resume
             </a>
             <button
               onClick={() => scrollToSection("#contact")}
-              className="rounded-lg border-2 border-gray-300 bg-white px-8 py-4 font-semibold text-gray-800 transition-all duration-300 hover:scale-105 hover:border-blue-500 hover:shadow-xl dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:hover:border-cyan-500"
+              className="rounded-lg border-2 border-gray-300 bg-white px-8 py-4 font-semibold text-gray-800 transition-all duration-700 hover:scale-105 hover:border-blue-500 hover:shadow-xl dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:hover:border-cyan-500"
             >
               Contact Me
             </button>
@@ -79,7 +79,7 @@ export default function Hero() {
               href="https://github.com/adaken4"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-gray-200 p-3 transition-all duration-300 hover:scale-110 hover:bg-blue-600 hover:text-white dark:bg-gray-700 dark:hover:bg-cyan-500"
+              className="rounded-full bg-gray-200 p-3 transition-all duration-700 hover:scale-110 hover:bg-blue-600 hover:text-white dark:bg-gray-700 dark:hover:bg-cyan-500"
               aria-label="GitHub"
             >
               <SiGithub size={24} />
@@ -88,14 +88,14 @@ export default function Hero() {
               href="https://www.linkedin.com/in/kennedy-ada-606655184/"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-gray-200 p-3 transition-all duration-300 hover:scale-110 hover:bg-blue-600 hover:text-white dark:bg-gray-700 dark:hover:bg-cyan-500"
+              className="rounded-full bg-gray-200 p-3 transition-all duration-700 hover:scale-110 hover:bg-blue-600 hover:text-white dark:bg-gray-700 dark:hover:bg-cyan-500"
               aria-label="LinkedIn"
             >
               <SiLinkedin size={24} />
             </a>
             <a
               href="mailto:adakennedy6@gmail.com"
-              className="rounded-full bg-gray-200 p-3 transition-all duration-300 hover:scale-110 hover:bg-blue-600 hover:text-white dark:bg-gray-700 dark:hover:bg-cyan-500"
+              className="rounded-full bg-gray-200 p-3 transition-all duration-700 hover:scale-110 hover:bg-blue-600 hover:text-white dark:bg-gray-700 dark:hover:bg-cyan-500"
               aria-label="Email"
             >
               <LuMail size={24} />
