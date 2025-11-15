@@ -27,20 +27,33 @@ export default function ContactForm() {
     setIsSubmitting(true);
     setStatus("idle");
 
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    if (formData.name && formData.email && formData.message) {
-      setStatus("success");
-      setFormData({ name: "", email: "", message: "" });
-    } else {
+      if (response.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        const errorData = await response.json();
+        console.error("Submission failed:", errorData);
+        setStatus("error");
+      }
+    } catch (error) {
+      console.error("Network or fetch error:", error);
       setStatus("error");
+    } finally {
+      setIsSubmitting(false);
+
+      setTimeout(() => {
+        setStatus("idle");
+      }, 5000);
     }
-
-    setIsSubmitting(false);
-
-    setTimeout(() => {
-      setStatus("idle");
-    }, 5000);
   };
 
   return (
@@ -49,13 +62,7 @@ export default function ContactForm() {
         Send a Message
       </h3>
 
-      <form
-        name="contact"
-        method="POST"
-        data-netlify="true"
-        onSubmit={handleSubmit}
-        className="space-y-6"
-      >
+      <form name="contact" onSubmit={handleSubmit} className="space-y-6">
         <div>
           <label
             htmlFor="name"
