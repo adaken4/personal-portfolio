@@ -19,3 +19,19 @@ export interface Experience {
   achievements: string[];
   technologies: string[];
 }
+
+export const tokenColors = {
+  keyword: "text-purple-400",
+  key: "text-green-400",
+  string: "text-yellow-300",
+  boolean: "text-blue-400",
+  symbol: "text-gray-300",
+  text: "text-gray-200",
+};
+
+type TokenType = keyof typeof tokenColors;
+
+export interface CodeToken {
+  t: TokenType;
+  v: string;
+}

@@ -3,17 +3,9 @@
 import { LuUsers, LuLightbulb, LuTarget } from "react-icons/lu";
 import { BiCodeAlt } from "react-icons/bi";
 import { useState, useEffect } from "react";
+import { tokenColors, CodeToken } from "../types/types";
 
-const tokenColors = {
-  keyword: "text-purple-400",
-  key: "text-green-400",
-  string: "text-yellow-300",
-  boolean: "text-blue-400",
-  symbol: "text-gray-300",
-  text: "text-gray-200",
-};
-
-const code = [
+const code: CodeToken[][] = [
   [
     { t: "keyword", v: "const" },
     { t: "text", v: " developer " },
@@ -89,12 +81,15 @@ function TypewriterCode() {
             // re-tokenize each line dynamically
             let index = 0;
             return (
-              <div key={i}>
+              <div key={`line-${i}`}>
                 {code[i].map((token, j) => {
                   const text = ln.slice(index, index + token.v.length);
                   index += token.v.length;
                   return (
-                    <span key={j} className={tokenColors[token.t]}>
+                    <span
+                      key={`token-${i}-${j}`}
+                      className={tokenColors[token.t]}
+                    >
                       {text}
                     </span>
                   );
