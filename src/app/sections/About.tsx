@@ -117,54 +117,28 @@ export default function About() {
         <div className="mb-16 grid items-center gap-12 md:grid-cols-2">
           <div className="space-y-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
             <p>
-              My journey into development started with curiosity—a fascination
-              with how technology could solve real-world problems. From
-              tinkering with early web projects to building full-stack
-              applications with{" "}
-              <span className="font-semibold text-blue-600 dark:text-cyan-400">
-                Django
-              </span>
-              ,
-              <span className="font-semibold text-blue-600 dark:text-cyan-400">
-                {" "}
-                React
-              </span>
-              , and
-              <span className="font-semibold text-blue-600 dark:text-cyan-400">
-                {" "}
-                Stellar
-              </span>
-              , I&#39;ve grown into a developer who values both technical
-              excellence and human-centered design.
+              I am a dedicated and hardworking individual who is always eager to
+              learn and grow. I am highly organized and detail-oriented with a
+              passion for writing clean code. Having just completed 01edu&#39;s
+              rigorous full-stack curriculum, I&#39;ve built a solid foundation
+              in modern development, coupled with my commitment to ensuring that
+              each project I work on is completed on time, on budget, and to the
+              highest standards of quality, I believe makes me a valuable asset
+              to any software development team.
             </p>
-
             <p>
-              What drives me is the opportunity to turn complex challenges into
-              elegant, scalable solutions. Whether it&#39;s architecting a{" "}
-              <span className="font-semibold">
-                community cleanliness platform
-              </span>{" "}
-              like CleanTown or building{" "}
-              <span className="font-semibold">energy-sharing applications</span>{" "}
-              on the blockchain, I focus on creating products that make a
-              tangible impact.
-            </p>
-
-            <p>
-              Currently, I&#39;m actively developing CleanTown and organizing
+              In addition to my development work, I am dedicated to sharing
+              knowledge and fostering the tech community. I actively lead{" "}
               <span className="font-semibold text-blue-600 dark:text-cyan-400">
-                {" "}
                 Python Kisumu
               </span>
-              , bringing together developers to share knowledge and build
-              community. I approach every project with an analytical mindset,
-              structured thinking, and a commitment to writing clean,
-              maintainable code.
-            </p>
-
-            <p className="font-semibold text-gray-900 dark:text-white">
-              I believe the best software combines technical rigor with genuine
-              empathy for the people who use it.
+              , organizing developers to share expertise and build local
+              knowledge. I also conduct{" "}
+              <span className="font-semibold text-blue-600 dark:text-cyan-400">
+                weekly online classes
+              </span>
+              , helping others build a strong foundation in modern development
+              practices.
             </p>
           </div>
           {TypewriterCode()}
@@ -179,8 +153,8 @@ export default function About() {
               Clean Code
             </h3>
             <p className="text-sm text-gray-700 dark:text-gray-300">
-              Writing maintainable, well-structured code that scales with your
-              business.
+              Passionate about clean, readable, and well-structured code, and
+              learning best practices for scalability.
             </p>
           </div>
 
@@ -192,8 +166,8 @@ export default function About() {
               User-Centered
             </h3>
             <p className="text-sm text-gray-700 dark:text-gray-300">
-              Designing solutions that prioritize user experience and
-              accessibility.
+              Building with the end-user in mind, focusing on intuitive
+              interfaces and accessible design principles.
             </p>
           </div>
 
