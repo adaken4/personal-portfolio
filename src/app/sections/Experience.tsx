@@ -5,11 +5,11 @@ export default function Experience() {
     {
       company: "Python Kisumu",
       role: "Community Organizer & Technical Lead",
-      period: "2023 - Present",
+      period: "2024 - Present",
       description:
         "Leading the local Python developer community by organizing meetups, workshops, and collaborative projects. Mentoring junior developers and fostering knowledge sharing.",
       achievements: [
-        "Organized monthly technical workshops with 50+ attendees",
+        "Organized weekly online workshops with 15+ attendees",
         "Mentored 15+ developers in Python and Django best practices",
         "Built collaborative open-source projects with the community",
         "Created educational content and technical documentation",
@@ -22,57 +22,46 @@ export default function Experience() {
       ],
     },
     {
-      company: "CleanTown (Personal Project)",
-      role: "Full-Stack Developer & Product Owner",
-      period: "2024 - Present",
+      company: "Zone01 Kisumu",
+      role: "Full-Stack Developer (Go & JavaScript)",
+      period: "Oct 2023 - Present",
       description:
-        "Designing and developing a community-driven platform for environmental issue tracking and resolution. Leading all aspects from architecture to deployment.",
+        "Built and shipped multiple backend and frontend projects as part of Zone01’s intensive modules, focusing on performance, scalability, and clean, maintainable code.",
       achievements: [
-        "Architected scalable REST API with Django REST Framework",
-        "Implemented real-time issue tracking with geolocation features",
-        "Built responsive React frontend with modern UX patterns",
-        "Designed efficient database schema for community data",
-      ],
-      technologies: ["Django", "React", "PostgreSQL", "REST API", "Docker"],
-    },
-    {
-      company: "Blockchain Projects",
-      role: "Web3 Developer",
-      period: "2023 - 2024",
-      description:
-        "Specialized in developing decentralized applications on the Stellar blockchain, focusing on payment integrations and wallet connectivity.",
-      achievements: [
-        "Integrated Freighter wallet with multiple React applications",
-        "Implemented USDC payment flows on Stellar testnet",
-        "Built energy sharing platform with smart contract integration",
-        "Created educational course payment system with crypto transactions",
+        "Developed RESTful APIs using Go (net/http, Gorilla, JWT auth) for real-world module projects",
+        "Built dynamic frontends using Vanilla JavaScript, HTML, and CSS without frameworks to master core JS fundamentals",
+        "Implemented real-time features and authentication systems in multiple Go + JS projects",
+        "Designed and optimized PostgreSQL schemas for production-style applications",
+        "Collaborated in peer-to-peer code reviews and system design sessions following Zone01’s industry-simulated workflow",
       ],
       technologies: [
-        "Stellar SDK",
-        "Next.js",
-        "TypeScript",
-        "Freighter Wallet",
-        "Web3",
-      ],
-    },
-    {
-      company: "Freelance Development",
-      role: "Full-Stack Developer",
-      period: "2022 - 2023",
-      description:
-        "Delivered custom web applications for various clients, focusing on scalable architecture and clean code practices.",
-      achievements: [
-        "Built 10+ full-stack applications from concept to deployment",
-        "Implemented CI/CD pipelines reducing deployment time by 60%",
-        "Optimized database queries improving performance by 40%",
-        "Maintained 98% client satisfaction rate",
-      ],
-      technologies: [
-        "Django",
-        "React",
+        "Go (Golang)",
+        "JavaScript (Vanilla)",
+        "HTML",
+        "CSS",
         "PostgreSQL",
-        "Docker",
-        "GitHub Actions",
+        "SQLite3",
+        "Git",
+        "REST APIs",
+      ],
+    },
+    {
+      company: "British High Commission Upper Hill",
+      role: "IT Support & Equipment Technician Intern",
+      period: "Feb 2023 - May-2023",
+      description:
+        "Provided hands-on IT maintenance and asset management support.",
+      achievements: [
+        "Performed diagnostics, maintenance, and setup of computer systems and peripherals",
+        "Sorted, labeled, and managed IT equipment inventory",
+        "Assisted with basic network and workstation troubleshooting",
+        "Supported end users with hardware and system issues",
+      ],
+      technologies: [
+        "Windows",
+        "Computer Hardware",
+        "Networking Basics",
+        "IT Asset Management",
       ],
     },
   ];
@@ -95,18 +84,6 @@ export default function Experience() {
             {experiences.map((exp) => (
               <ExperienceCard key={exp.company} exp={exp} />
             ))}
-          </div>
-        </div>
-
-        <div className="mt-16 text-center">
-          <div className="inline-block rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 p-8 text-white shadow-xl">
-            <h3 className="mb-2 text-2xl font-bold">
-              Python Institute Certification
-            </h3>
-            <p className="mb-1 text-lg">
-              PCEP - Certified Entry-Level Python Programmer
-            </p>
-            <p className="text-blue-100">Python Institute</p>
           </div>
         </div>
       </div>
