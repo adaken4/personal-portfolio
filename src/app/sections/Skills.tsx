@@ -53,17 +53,6 @@ export default function Skills() {
       ],
     },
     {
-      title: "Blockchain & Web3",
-      skills: [
-        "Stellar SDK",
-        "Freighter Wallet",
-        "Smart Contracts",
-        "Testnet Development",
-        "USDC Integration",
-        "DApp Development",
-      ],
-    },
-    {
       title: "Other Technologies",
       skills: [
         "REST APIs",
