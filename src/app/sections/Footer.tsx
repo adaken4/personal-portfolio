@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import {
   LuGithub,
   LuLinkedin,
@@ -11,7 +14,11 @@ import {
 } from "react-icons/lu";
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
+  const [currentYear, setCurrentYear] = useState("");
+  useEffect(() => {
+    // Should run on the client side to avoid cached deployment issues
+    setCurrentYear(new Date().getFullYear().toString());
+  }, []);
 
   return (
     <footer className="bg-gray-900 py-12 text-gray-300">
